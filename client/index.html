@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 21 - CRUD</title>
+  <link rel="stylesheet" href="https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <main>
+    <h1>Books dashboard</h1>
+    <section>
+      <div class="container">
+        <h2>Add a new book</h2>
+        <form id="create-book-form">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title">
+          </div>
+          <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author">
+          </div>
+          <div class="form-group">
+            <label for="cover">Cover</label>
+            <input type="file" name="cover" id="cover">
+          </div>
+          <button type="submit">Create book</button>
+        </form>
+        <img id="cover-display">
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2>My books</h2>
+        <ul data-id="books-list" class="book-list">
+        </ul>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <form id="update-book-form">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title">
+        </div>
+        <div class="form-group">
+          <label for="author">Author</label>
+          <input type="text" name="author" id="author">
+        </div>
+        <button type="submit">Update book</button>
+      </form>
+      <div class="close-icon" data-modal-close>X</div>
+    </div>
+  </div>
+
+  <script src="./js/main.js" type="module"></script>
+</body>
+
+</html>
